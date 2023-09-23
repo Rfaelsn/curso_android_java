@@ -58,24 +58,28 @@
             android:id="@+id/btn_somar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="somar"
             android:text="@string/somar" />
 
         <Button
             android:id="@+id/btn_subtrair"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="subtrair"
             android:text="@string/subtrair" />
 
         <Button
             android:id="@+id/btn_multiplicar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="multiplicar"
             android:text="@string/multiplicar" />
 
         <Button
             android:id="@+id/btn_dividir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="dividir"
             android:text="@string/dividir" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
