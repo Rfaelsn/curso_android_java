@@ -7,79 +7,120 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="382dp"
-        android:layout_height="match_parent"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="16dp">
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
 
-        <TextView
-            android:id="@+id/textView3"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_name" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView4"
+            <CheckBox
+                android:id="@+id/cb_tacas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Taças R$" />
+
+            <EditText
+                android:id="@+id/et_tacas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:numeric="decimal"
+                android:text="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/valor1" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/et_valor1"
+            <CheckBox
+                android:id="@+id/cb_pratos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pratos R$" />
+
+            <EditText
+                android:id="@+id/et_pratos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:numeric="decimal"
+                android:text="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:numeric="decimal"
-            android:text="0" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView5"
+            <CheckBox
+                android:id="@+id/cb_garfos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Garfos R$" />
+
+            <EditText
+                android:id="@+id/et_garfos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:numeric="decimal"
+                android:text="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/valor2" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/et_valor2"
+            <CheckBox
+                android:id="@+id/cb_facas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Facas R$" />
+
+            <EditText
+                android:id="@+id/et_facas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:numeric="decimal"
+                android:text="0" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_calcular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:numeric="decimal"
-            android:text="0" />
+            android:onClick="Calcular"
+            android:text="Calcular" />
 
         <TextView
             android:id="@+id/tv_resultado"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/btn_somar"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="calculate"
-            android:text="@string/somar" />
-
-        <Button
-            android:id="@+id/btn_subtrair"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="calculate"
-            android:text="@string/subtrair" />
-
-        <Button
-            android:id="@+id/btn_multiplicar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="calculate"
-            android:text="@string/multiplicar" />
-
-        <Button
-            android:id="@+id/btn_dividir"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="calculate"
-            android:text="@string/dividir" />
+            android:text="Valor total: R$: "
+            android:textSize="20sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,92 +5,65 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    double num1, num2, result;
-    EditText et_valor1;
-    EditText et_valor2;
-    TextView tv_resultado;
+
+    double vTaca, vPrato, vGarfo, vFaca, vTotal;
+    EditText etTacas, etPratos, etGarfos, etFacas;
+    CheckBox cbTacas, cbPratos, cbGarfos, cbFacas;
+    Button btnCalcular;
+    TextView tvResultado;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn_somar = findViewById(R.id.btn_somar);
-        Button btn_subtrair = findViewById(R.id.btn_subtrair);
-        Button btn_multiplicar = findViewById(R.id.btn_multiplicar);
-        Button btn_dividir = findViewById(R.id.btn_dividir);
+        etTacas = findViewById(R.id.et_tacas);
+        etPratos = findViewById(R.id.et_pratos);
+        etGarfos = findViewById(R.id.et_garfos);
+        etFacas = findViewById(R.id.et_facas);
 
-        et_valor1 = findViewById(R.id.et_valor1);
-        et_valor2 = findViewById(R.id.et_valor2);
+        cbTacas = findViewById(R.id.cb_tacas);
+        cbPratos = findViewById(R.id.cb_pratos);
+        cbGarfos = findViewById(R.id.cb_garfos);
+        cbFacas = findViewById(R.id.cb_facas);
 
-        tv_resultado = findViewById(R.id.tv_resultado);
+        btnCalcular = findViewById(R.id.btn_calcular);
 
-        /* primeira forma
-        * btn_somar.setOnClickListener(new View.onClickListener(){
-        *   public void onClick(View v){
-        *       num1 = Double.parseDouble(et_valor1.getText().toString());
-                num2 = Double.parseDouble(et_valor2.getText().toString());
-                result = num1 + num2;
-                tv_resultado.setText(String.valueOf(result));
-        *   }
-        * });
-        * */
+        tvResultado = findViewById(R.id.tv_resultado);
 
+
+        vTaca = 0.25;
+        vPrato = 0.20;
+        vGarfo = 0.15;
+        vFaca = 0.15;
+        vTotal = 0.0;
     }
 
-//    public void somar(View v){  //segunda forma
-//    //podemos fazer a seleção direta de cada metodo pelo xml
-//        num1 = Double.parseDouble(et_valor1.getText().toString());
-//        num2 = Double.parseDouble(et_valor2.getText().toString());
-//        result = num1 + num2;
-//        tv_resultado.setText(String.valueOf(result));
-//    }
+    public void Calcular(View v){
+        vTotal = 0.0;
 
-    public void somar(){
-        num1 = Double.parseDouble(et_valor1.getText().toString());
-        num2 = Double.parseDouble(et_valor2.getText().toString());
-        result = num1 + num2;
-        tv_resultado.setText(String.valueOf(result));
-    }
-
-    public void subtrair(){
-        num1 = Double.parseDouble(et_valor1.getText().toString());
-        num2 = Double.parseDouble(et_valor2.getText().toString());
-        result = num1 - num2;
-        tv_resultado.setText(String.valueOf(result));
-    }
-
-    public void multiplicar(){
-        num1 = Double.parseDouble(et_valor1.getText().toString());
-        num2 = Double.parseDouble(et_valor2.getText().toString());
-        result = num1 * num2;
-        tv_resultado.setText(String.valueOf(result));
-    }
-
-    public void dividir(){
-        num1 = Double.parseDouble(et_valor1.getText().toString());
-        num2 = Double.parseDouble(et_valor2.getText().toString());
-        result = num1 / num2;
-        tv_resultado.setText(String.valueOf(result));
-    }
-
-    public void calculate(View v){
-        final int  id_view_clicada = v.getId();
-        final int  btn_somar = R.id.btn_somar;
-
-        if (id_view_clicada == R.id.btn_somar) {
-            somar();
-        } else if (id_view_clicada == R.id.btn_subtrair) {
-            subtrair();
-        } else if (id_view_clicada == R.id.btn_multiplicar) {
-            multiplicar();
-        } else if (id_view_clicada == R.id.btn_dividir) {
-            dividir();
+        if(cbTacas.isChecked()){
+            vTotal += vTaca * Double.parseDouble(etTacas.getText().toString());
         }
-    }
 
+        if(cbPratos.isChecked()){
+            vTotal += vPrato * Double.parseDouble(etPratos.getText().toString());
+        }
+
+        if(cbGarfos.isChecked()){
+            vTotal += vGarfo * Double.parseDouble(etGarfos.getText().toString());
+        }
+
+        if(cbFacas.isChecked()){
+            vTotal += vFaca * Double.parseDouble(etFacas.getText().toString());
+        }
+
+        tvResultado.setText("Valor total: R$: " +  vTotal);
+    }
 
 }
