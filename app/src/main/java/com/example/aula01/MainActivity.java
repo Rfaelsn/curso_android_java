@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         tvResultado.setText("Valor total: R$: " +  vTotal);
+
+        Toast.makeText(this,"toast 1", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"toast 2", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Valor total Calculado", Toast.LENGTH_LONG).show();
     }
 
 }
