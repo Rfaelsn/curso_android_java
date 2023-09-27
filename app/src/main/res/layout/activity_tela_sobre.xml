@@ -6,21 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".TelaSobre">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CFB Cursos"
-        android:textSize="34sp"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="138dp" />
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="136dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="voltarTelaPrincipal"
-        android:text="voltar"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="228dp" />
+        <TextView
+            android:id="@+id/tv_nome_resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CFB Cursos"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="voltarTelaPrincipal"
+            android:text="voltar" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
