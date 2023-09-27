@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
     public void acessarTelaSobre(View v){
         Intent itTelaSobre = new Intent(this,TelaSobre.class);
         startActivity(itTelaSobre);
+//        setContentView(R.layout.activity_tela_sobre);
     }
 
 
