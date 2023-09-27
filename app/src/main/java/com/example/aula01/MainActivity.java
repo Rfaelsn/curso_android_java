@@ -2,6 +2,7 @@ package com.example.aula01;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -72,6 +73,11 @@ public class MainActivity extends AppCompatActivity {
         cxMsg.setMessage("Valor total Calculado");
         cxMsg.setNeutralButton("Ok",null);
         cxMsg.show();
+    }
+
+    public void acessarTelaSobre(View v){
+        Intent itTelaSobre = new Intent(this,TelaSobre.class);
+        startActivity(itTelaSobre);
     }
 
 
